@@ -19,3 +19,14 @@ def decode_word(string)
   decoded_word
 end
   
+def decode_message(string)
+  arr = string.split('   ')
+  decode_message = ''
+  arr.each { |n|
+  decode_message += decode_word(n)
+  decode_message += " "
+  }
+  decode_message
+end
+
+puts decode_message(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
