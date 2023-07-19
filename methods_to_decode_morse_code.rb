@@ -8,6 +8,14 @@ def decode_char(char)
       '--..' => 'Z'
     }
     morse_hash[char]
-  end
+end
 
+def decode_word(string)
+  arr = string.split(' ')
+  decoded_word = ''
+  arr.each { |n| 
+  decoded_word += decode_char(n)
+  }
+  decoded_word
+end
   
